@@ -41,5 +41,5 @@ do
       fi
     fi
     # get mu-plugin via php_url and renaming
-    wget -c -q ${wpi_plugins_mu_plugins__php_url[$i]} -O $mu_plugins_path/${wpi_plugins_mu_plugins__name[$i]}.php
+    curl --silent ${wpi_plugins_mu_plugins__php_url[$i]} > $mu_plugins_path/${wpi_plugins_mu_plugins__name[$i]}.php
 done
